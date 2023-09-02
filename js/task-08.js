@@ -8,15 +8,15 @@ function onSubmit(event) {
     // console.log(email.value);
     // console.log(password.value);
 
+    if (email.value === "" || password.value === "") {
+        alert('Всі поля повинні бути заповнені!');
+    }
+
     const data = {
         email: email.value,
         password: password.value,   
     };
     
-    if (email.value === "" || password.value === "") {
-        alert('Всі поля повинні бути заповнені!');
-    }
-
     console.log(data);
     formEl.reset();
 }
